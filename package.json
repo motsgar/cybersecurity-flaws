@@ -1,0 +1,34 @@
+{
+	"name": "cybersecurity-flaws",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/app.js",
+	"scripts": {
+		"dev": "concurrently -n tsx,vite 'npm run dev:tsx' 'npm run dev:vite'",
+		"dev:vite": "vite web",
+		"dev:tsx": "tsx src/index.ts",
+		"start": "node dist/index.js",
+		"db:init": "node ./dbInit.js"
+	},
+	"type": "module",
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/express": "^5.0.0",
+		"@types/express-session": "^1.18.1",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.1",
+		"express-mysql-session": "^3.0.3",
+		"express-session": "^1.18.1",
+		"mysql2": "^3.11.5"
+	},
+	"devDependencies": {
+		"@tsconfig/node20": "^20.1.4",
+		"@types/express-mysql-session": "^3.0.6",
+		"concurrently": "^9.1.0",
+		"esbuild": "^0.24.0",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2",
+		"vite": "^6.0.1"
+	}
+}
